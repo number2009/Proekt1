@@ -32,13 +32,90 @@
           <div class="info">
             <h2 class="name">Сырная пицца</h2>
 
-            <p class="description">30 см, традиционное тесто 30, 590 г</p>
-            <div class="product-buy">
-              <button class="product-button">Купить</button>
-              <p class="product-price">От 199 Руб</p>
+            <p class="description-header">30 см, традиционное тесто 30, 590 г</p>
+            <p class="description-main">Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо</p>
+          <div class="container-buy">
+              <div class="bar bar-grey">
+                <div class="option">Маленькая</div>
+                <div class="option">Средняя</div>
+                <div class="option">Большая</div>
+              </div>
+            <div class="bar-outer">
+              <div class="bar bar-purple">
+                <div class="option">Маленькая</div>
+                <div class="option">Средняя</div>
+                <div class="option">Большая</div>
+              </div>
             </div>
           </div>
-        </div>
+          <h3>
+              Добавить по вкусу
+          </h3>
+          <div class="products-vegetables">
+            
+          <div class="product-vegetables">
+            <button class="product-vegetables-buy">
+               <img
+            src="https://cdn.dodostatic.net/static/Img/Ingredients/cdea869ef287426386ed634e6099a5ba.png"
+            class="product-vegetables-img"
+            />
+            <div class="product-vegetables-information">
+              <div class="product-title">
+                <h5>Сливочная моцарелла</h5>
+              </div>
+              <div class="product-vegetables-price">
+                <p>99</p>
+                <p>₽</p>
+              </div> 
+            </div>
+            </button>
+          </div>
+          <div class="product-vegetables">
+            <button class="product-vegetables-buy">
+               <img
+            src="https://cdn.dodostatic.net/static/Img/Ingredients/000D3A21DA51A81211E9EA89958D782B"
+            class="product-vegetables-img"
+            />
+            <div class="product-vegetables-information">
+              <div class="product-title">
+                <h5>Маринованные огурчики</h5>
+              </div>
+              <div class="product-vegetables-price">
+                <p>79</p>
+                <p>₽</p>
+              </div> 
+            </div>
+            </button>
+          </div>
+          <div class="product-vegetables">
+            <button class="product-vegetables-buy">
+               <img
+            src="https://cdn.dodostatic.net/static/Img/Ingredients/000D3A39D824A82E11E9AFA7AC1A1D67"
+            class="product-vegetables-img"
+            />
+            <div class="product-vegetables-information">
+              <div class="product-title">
+                <h5>Натуральные томаты</h5>
+              </div>
+              <div class="product-vegetables-price">
+                <p>79</p>
+                <p>₽</p>
+              </div> 
+            </div>
+            </button>
+          </div>
+          
+          </div>
+          <div class="product-pizza-buy">
+              <button class="product-button">Купить</button>
+              <p class="product-price"> ...  Руб</p>
+            </div>
+          </div>
+          
+
+            
+          </div>
+        
       </main>
       <footer>
         <hr class="footer-line" />
@@ -80,5 +157,23 @@
         <div class="footer-text">&copy; Copyright 2024.</div>
       </footer>
     </div>
+    <script>
+      const barOuter = document.querySelector(".bar-outer");
+      const options = document.querySelectorAll(".bar-grey .option");
+      let current = 1;
+      options.forEach((option, i) => (option.index = i + 1));
+      options.forEach(option =>
+                option.addEventListener("click", function() {
+      barOuter.className = "bar-outer";
+      barOuter.classList.add(`pos${option.index}`);
+      if (option.index > current) {
+         barOuter.classList.add("right");
+      } else if (option.index < current) {
+      barOuter.classList.add("left");
+      }
+      current = option.index;
+      }));
+    </script>
+    
   </body>
 </html>

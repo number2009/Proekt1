@@ -129,20 +129,24 @@ ul {
   justify-content: center;
 }
 .product-detail-img {
-  margin-right: 10%;
+  justify-content: center;
 }
 
 .product-detail-image {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
+  margin-right: 150px;
+  margin-top: 60px;
+  
 }
+
 
 .info {
   margin-left: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
 }
 .product-name {
   margin: 10px;
@@ -157,6 +161,14 @@ ul {
   height: 36px;
   overflow-y: hidden;
   text-overflow: ellipsis;
+}
+.product-pizza-buy {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
 }
 .product-buy {
   display: flex;
@@ -226,7 +238,7 @@ ul {
   border: 0;
   margin: 0;
   border-left: 2px solid rgb(122, 122, 122);
-  height: 350px;
+  height: 450px;
   float: left;
 }
 .section-name {
@@ -281,7 +293,30 @@ ul {
 #eat-click-number2 {
   margin-top: 150px;
 }
-
+.product-vegetables-img{
+  width: 100px;
+}
+.products-vegetables{
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  gap: 50px;
+}
+.product-vegetables-price{
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  margin-left: 35px;
+}
+.product-title{
+  width: 35px;
+  margin-left: 10px;
+}
+.product-vegetables-buy{
+  border: none;
+  border-radius: 10px;
+  background-color: none;
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   .section-name {
     margin-top: 0;
@@ -330,10 +365,6 @@ ul {
     margin-right: 0;
   }
 
-  .info {
-    margin: 0;
-  }
-
   .product-buy {
     margin-top: 50px;
   }
@@ -351,6 +382,7 @@ ul {
   .product-detail-image {
   width: 233px;
   height: 233px;
+  
 }
 }
 @media (max-width: 430px) {
@@ -396,14 +428,10 @@ ul {
     margin-right: 0;
   }
 
-  .info {
-    margin: 0;
-  }
-
   .product-buy {
     margin-top: 50px;
   }
-
+  
   .header-title {
     flex-direction: column;
     align-items: center;
@@ -415,3 +443,190 @@ ul {
     justify-content: center;
   }
 }
+.container-buy {
+  align-items: center;
+  background: rgb(197, 194, 194);
+  border-radius: 20px ;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+  width: 360px;
+}
+
+.bar {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 30px;
+  left: 0;
+  padding: 0 21px;
+  position: absolute;
+  width: 100%;
+}
+.bar-purple {
+  background: #6000ea;
+  color: white;
+  clip-path: polygon(
+    360px 0,
+    360px 32px,
+    43px 32px,
+    39.775442px 31.67494px,
+    36.772078px 30.74264px,
+    34.054248px 29.26745px,
+    31.686292px 27.31371px,
+    29.732549px 24.94575px,
+    28.257359px 22.22792px,
+    27.325063px 19.22456px,
+    27px 16px,
+    27.325063px 12.77544px,
+    28.257359px 9.77208px,
+    29.732549px 7.05425px,
+    31.686292px 4.68629px,
+    34.054248px 2.73255px,
+    36.772078px 1.25736px,
+    39.775442px 0.32506px,
+    43px 0
+  );
+  transition: clip-path 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.option {
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  width: 33.33%;
+}
+.bar-outer {
+  clip-path: polygon(0 0, 120px 0, 120px 32px, 0 32px);
+  clip-path: polygon(
+    0 0,
+    0 32px,
+    104px 32px,
+    107.22456px 31.67494px,
+    110.22792px 30.74264px,
+    112.94575px 29.26745px,
+    115.31371px 27.31371px,
+    117.26745px 24.94575px,
+    118.74264px 22.22792px,
+    119.67494px 19.22456px,
+    120px 16px,
+    119.67494px 12.77544px,
+    118.74264px 9.77208px,
+    117.26745px 7.05425px,
+    115.31371px 4.68629px,
+    112.94575px 2.73255px,
+    110.22792px 1.25736px,
+    107.22456px 0.32506px,
+    104px 0
+  );
+  height: 30px;
+  pointer-events: none;
+  transition: clip-path 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+.bar-outer.pos2 .bar-purple {
+  clip-path: polygon(
+    360px 0,
+    360px 32px,
+    149px 32px,
+    145.775442px 31.67494px,
+    142.772078px 30.74264px,
+    140.054248px 29.26745px,
+    137.686292px 27.31371px,
+    135.732549px 24.94575px,
+    134.257359px 22.22792px,
+    133.325063px 19.22456px,
+    133px 16px,
+    133.325063px 12.77544px,
+    134.257359px 9.77208px,
+    135.732549px 7.05425px,
+    137.686292px 4.68629px,
+    140.054248px 2.73255px,
+    142.772078px 1.25736px,
+    145.775442px 0.32506px,
+    149px 0
+  );
+}
+.bar-outer.pos2 {
+  clip-path: polygon(
+    0 0,
+    0 32px,
+    210px 32px,
+    213.22456px 31.67494px,
+    216.22792px 30.74264px,
+    218.94575px 29.26745px,
+    221.31371px 27.31371px,
+    223.26745px 24.94575px,
+    224.74264px 22.22792px,
+    225.67494px 19.22456px,
+    226px 16px,
+    225.67494px 12.77544px,
+    224.74264px 9.77208px,
+    223.26745px 7.05425px,
+    221.31371px 4.68629px,
+    218.94575px 2.73255px,
+    216.22792px 1.25736px,
+    213.22456px 0.32506px,
+    210px 0
+  );
+}
+.bar-outer.pos3 .bar-purple {
+  clip-path: polygon(
+    360px 0,
+    360px 32px,
+    256px 32px,
+    252.775442px 31.67494px,
+    249.772078px 30.74264px,
+    247.054248px 29.26745px,
+    244.686292px 27.31371px,
+    242.732549px 24.94575px,
+    241.257359px 22.22792px,
+    240.325063px 19.22456px,
+    240px 16px,
+    240.325063px 12.77544px,
+    241.257359px 9.77208px,
+    242.732549px 7.05425px,
+    244.686292px 4.68629px,
+    247.054248px 2.73255px,
+    249.772078px 1.25736px,
+    252.775442px 0.32506px,
+    256px 0
+  );
+}
+.bar-outer.pos3 {
+  clip-path: polygon(0 0, 333px 0, 333px 32px, 0 32px);
+  clip-path: polygon(
+    0 0,
+    0 32px,
+    317px 32px,
+    320.22456px 31.67494px,
+    323.22792px 30.74264px,
+    325.94575px 29.26745px,
+    328.31371px 27.31371px,
+    330.26745px 24.94575px,
+    331.74264px 22.22792px,
+    332.67494px 19.22456px,
+    333px 16px,
+    332.67494px 12.77544px,
+    331.74264px 9.77208px,
+    330.26745px 7.05425px,
+    328.31371px 4.68629px,
+    325.94575px 2.73255px,
+    323.22792px 1.25736px,
+    320.22456px 0.32506px,
+    317px 0
+  );
+}
+.bar-outer.left .bar-purple {
+  transition-delay: 0;
+}
+.bar-outer.left {
+  transition-delay: 80ms;
+}
+.bar-outer.right .bar-purple {
+  transition-delay: 80ms;
+}
+.bar-outer.right {
+  transition-delay: 0;
+}
+
