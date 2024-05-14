@@ -164,7 +164,7 @@ ul {
 }
 .product-pizza-buy {
   display: flex;
-  margin-top: 50px;
+  margin-top: 120px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -256,13 +256,6 @@ ul {
   border: none;
   border-top: 2px solid darkred;
 }
-.header-line {
-  margin: 20px 0;
-  padding: 0;
-  height: 0;
-  border: none;
-  border-top: 2px solid rgb(122, 122, 122);
-}
 
 .footer-menu {
   display: flex;
@@ -296,6 +289,10 @@ ul {
 .product-vegetables-img{
   width: 100px;
 }
+.product-vegetables{
+  width: 100px;
+  height: 80px;
+}
 .products-vegetables{
   display: flex;
   background-color: rgb(255, 255, 255);
@@ -319,7 +316,10 @@ ul {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .section-name {
-    margin-top: 0;
+    margin-top: 100;
+  }
+  .product-buy{
+    margin-top: 25px;
   }
   .product {
     width: 38%;
@@ -334,6 +334,9 @@ ul {
   #eat-click-number1 {
     font-size: 24px;
   }
+  ul{
+    margin-left: 0;
+  }
   #eat-click-number2 {
     font-size: 24px;
   }
@@ -344,7 +347,14 @@ ul {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    width: 100%;
+    width: 75%;
+    margin-left: 65px;
+  }
+  #eat-click-number1{
+    margin-left: 65px;
+  }
+  #eat-click-number2{
+    margin-left: 65px;
   }
   .product {
     width: 90%;
@@ -387,25 +397,88 @@ ul {
 }
 @media (max-width: 430px) {
   .section-name {
-    margin-top: 0;
+    margin-top: 100px;
   }
+  .products{
+    gap: 35px;
+  }
+  .header-title {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .name {
+    text-align: center;
+    margin-left: -70px;
+}
+.title-img {
+    width: 15%;
+}
+.description-header{
+  margin-left: -55px;
+}
+  .header-line {
+  margin: 20px 0;
+  padding: 0;
+  height: 0;
+  border: none;
+  border-top: 2px solid rgb(122, 122, 122);
+}
+.footer-line {
+  margin: 20px 0;
+  padding: 0;
+  height: 0;
+  border: none;
+  border-top: 2px solid darkred;
+}
   .product-detail-image {
   width: 233px;
   height: 233px;
+  margin: 25px auto 50px;
+}
+.description-main{
+  width: 285px;
+  margin-left: -40px;
+  display: flex;
+  margin-bottom: 20px ;
+}
+.container-buy {
+    align-items: center;
+    background: rgb(197, 194, 194);
+    border-radius: 20px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    position: relative;
+    width: 300px;
+    margin-left: -68px;
+}
+.title-add-eat{
+  margin-left: -50px;
+}
+.products-vegetables {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    gap: 15px;
+    margin: 25px auto 50px -30px;
 }
   .product {
     width: 80%;
+    margin-left: 10%;
   }
   .product-voda {
     width: 80%;
+    margin-left: 10%;
   }
   #eat-click-number1 {
-    margin-left: 10px;
-    font-size: 18px;
+    margin-left: 15px;
+    font-size: 14px;
   }
   #eat-click-number2 {
-    margin-left: 10px;
-    font-size: 18px;
+    margin-left: 15px;
+    font-size: 14px;
   }
   #footer-menu-info {
     flex-direction: column;
@@ -419,17 +492,15 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 25px auto 50px -1px;
   }
   .vertical {
     display: none;
   }
 
-  .product-detail-img {
-    margin-right: 0;
-  }
 
   .product-buy {
-    margin-top: 50px;
+    margin-top: 100px;
   }
   
   .header-title {
@@ -437,6 +508,7 @@ ul {
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-left: -35px;
   }
 
   .header-block {
