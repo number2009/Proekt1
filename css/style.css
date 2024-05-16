@@ -538,6 +538,13 @@ ul {
   .section-name {
     margin-top: 100px;
   }
+  .home-back{
+    width: 20%;
+    margin-left: -160px;
+  }
+  .product-detail-img{
+    display: grid;
+  }
   .products{
     gap: 35px;
   }
@@ -659,6 +666,13 @@ ul {
 @media (min-width: 360px) and (max-width: 375px) {
   .section-name {
     margin-top: 100px;
+  }
+  .home-back{
+    width: 20%;
+    margin-left: -140px;
+  }
+  .product-detail-img{
+    display: grid;
   }
   .products{
     gap: 55px;
