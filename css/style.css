@@ -57,7 +57,9 @@ ul {
   margin: 25px auto 50px;
   font-size: 20px;
 }
-
+.name-voda{
+  margin-bottom: 30px;
+}
 .menu-list-item-link {
   padding: 10px;
   border: 2px solid transparent;
@@ -149,7 +151,11 @@ ul {
 .product-img:hover {
   transform: translateY(10px);
 }
-
+.product-detail-img-voda{
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
 .product-detail {
   display: flex;
   width: 100%;
@@ -163,14 +169,33 @@ ul {
 .product-detail-image {
   width: 350px;
   height: 350px;
-  margin-right: 150px;
   margin-top: 60px;
   
 }
-
-
+.product-detail-image-voda {
+  width: 350px;
+  height: 350px;
+  
+  display: flex;
+  margin-top: -30px;
+}
+.vertical-voda {
+  border: 0;
+  margin: 0;
+  border-left: 2px solid rgb(122, 122, 122);
+  margin-right: 200px;
+  height: 420px;
+  float: left;
+}
 .info {
   margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.info-voda {
+  margin-right: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -198,6 +223,10 @@ ul {
   justify-content: space-between;
   align-items: center;
   gap: 35px;
+}
+
+.https-home{
+  width: 20%;
 }
 .product-buy {
   display: flex;
@@ -260,7 +289,9 @@ ul {
   margin: 0;
   padding: 0;
 }
-
+#buy-voda{
+  margin-top: 280px;
+}
 .product-voda {
   height: 350px;
   width: 25.2%;
@@ -277,8 +308,10 @@ ul {
   margin: 0;
   border-left: 2px solid rgb(122, 122, 122);
   height: 820px;
+  margin-left: 200px;
   float: left;
 }
+
 .section-name {
   color: orangered;
   font-style: oblique;
@@ -539,9 +572,10 @@ ul {
     margin-top: 100px;
   }
   .home-back{
-    width: 20%;
-    margin-left: -160px;
+    width: 30%;
+    margin-left: -150px;
   }
+
   .product-detail-img{
     display: grid;
   }
@@ -600,6 +634,7 @@ ul {
     width: 300px;
     margin-left: -68px;
 }
+
 .title-add-eat{
   margin-left: -50px;
 }
@@ -662,6 +697,38 @@ ul {
   .header-block {
     justify-content: center;
   }
+
+  .info-voda {
+    margin-right: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.product-detail-image-voda {
+  width: 233px;
+  height: 233px;
+  margin: 25px auto 50px -30px;
+}
+.product-detail-img-voda {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+.vertical-voda {
+    display: none;
+  }
+  #buy-voda{
+  margin-top: 100px;
+}
+
+.https-home{
+    width: 52px;
+    margin-left: -80px;
+  }
+  .home-back-voda{
+    width: 100%;
+  }
 }
 @media (min-width: 360px) and (max-width: 375px) {
   .section-name {
@@ -669,8 +736,22 @@ ul {
   }
   .home-back{
     width: 20%;
-    margin-left: -140px;
+    margin-left: -100px;
   }
+  .https-home{
+    width: 52px;
+    margin-left: -55px;
+  }
+  .home-back-voda{
+    width: 100%;
+  }
+  .info-voda {
+    margin-right: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
   .product-detail-img{
     display: grid;
   }
@@ -686,6 +767,9 @@ ul {
   .name {
     text-align: center;
     margin-left: -70px;
+}
+#buy-voda{
+  margin-top: 100px;
 }
 .title-img {
     width: 15%;
@@ -711,6 +795,17 @@ ul {
   width: 233px;
   height: 233px;
   margin: 25px auto 50px -75px;
+  margin-right: 55px;
+}
+.product-detail-image-voda {
+  width: 233px;
+  height: 233px;
+  margin: 25px auto 50px -30px;
+}
+.product-detail-img-voda {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
 }
 .description-main{
   width: 285px;
@@ -728,6 +823,17 @@ ul {
     position: relative;
     width: 300px;
     margin-left: -68px;
+}
+.container-buy-voda {
+    align-items: center;
+    background: rgb(197, 194, 194);
+    border-radius: 20px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    position: relative;
+    width: 300px;
+    margin-left: auto;
 }
 .title-add-eat{
   margin-left: -50px;
@@ -772,6 +878,9 @@ ul {
   .vertical {
     display: none;
   }
+  .vertical-voda {
+    display: none;
+  }
 
 
   .product-buy {
@@ -802,7 +911,16 @@ ul {
   position: relative;
   width: 360px;
 }
-
+.container-buy-voda {
+  align-items: center;
+  background: rgb(197, 194, 194);
+  border-radius: 20px ;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+  width: 360px;
+}
 .bar {
   align-items: center;
   box-sizing: border-box;
