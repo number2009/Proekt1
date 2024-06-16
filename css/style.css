@@ -23,10 +23,7 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
-.menu{
-  margin-left: 30px;
-  margin-right: 30px;
-}
+
 .header-title {
   display: flex;
   justify-content: space-between;
@@ -127,7 +124,7 @@ button.popup-btn {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  font-size: 20px;
+  font-size: 16px;
 }
 .name-voda {
   margin-bottom: 30px;
