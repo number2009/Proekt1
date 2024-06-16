@@ -123,9 +123,7 @@ button.popup-btn {
 .menu-list {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-  margin: 25px auto 50px;
+  justify-content: space-evenly;
   font-size: 20px;
 }
 .name-voda {
