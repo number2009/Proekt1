@@ -23,7 +23,10 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
-
+.menu{
+  margin-left: auto;
+  margin-right: auto;
+}
 .header-title {
   display: flex;
   justify-content: space-between;
