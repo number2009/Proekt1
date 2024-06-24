@@ -39,20 +39,21 @@
 
             <p class="description-header">30 см, традиционное тесто 30, 590 г</p>
             <p class="description-main">Пикантная пепперони, увеличенная порция моцареллы, томаты, фирменный томатный соус</p>
-          <div class="container-buy">
-              <div class="bar bar-grey">
-                <div class="option">Маленькая</div>
-                <div class="option">Средняя</div>
-                <div class="option">Большая</div>
-              </div>
-            <div class="bar-outer">
-              <div class="bar bar-purple">
-                <div class="option">Маленькая</div>
-                <div class="option">Средняя</div>
-                <div class="option">Большая</div>
-              </div>
-            </div>
-          </div>
+          
+            <section class="nav-1">
+              <nav>
+                 <a class="item" href="#nav-1">
+                    <div class="linktext small">Маленькая</div>
+                </a>
+                <a class="item" href="#nav-1">
+                   <div class="linktext average">Средняя</div>
+                </a>
+                <a class="item" href="#nav-1">
+                    <div class="linktext large">Большая</div>
+                </a>
+    
+  </nav>
+</section>
           <h3 class="title-add-eat">
               Добавить по вкусу
           </h3>
@@ -171,24 +172,6 @@
 
         <div class="footer-text">&copy; Copyright 2024.</div>
       </footer>
-    </div>
-    <script>
-      const barOuter = document.querySelector(".bar-outer");
-      const options = document.querySelectorAll(".bar-grey .option");
-      let current = 1;
-      options.forEach((option, i) => (option.index = i + 1));
-      options.forEach(option =>
-                option.addEventListener("click", function() {
-      barOuter.className = "bar-outer";
-      barOuter.classList.add(`pos${option.index}`);
-      if (option.index > current) {
-         barOuter.classList.add("right");
-      } else if (option.index < current) {
-      barOuter.classList.add("left");
-      }
-      current = option.index;
-      }));
-    </script>
-    
+    </div>    
   </body>
 </html>
