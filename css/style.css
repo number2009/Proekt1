@@ -565,17 +565,6 @@ nav {
 .nav-1 .item:hover .large {
   color: #0000ff;
 }
-@media (max-width: 840px) {
-  nav {
-    margin-left: 20px;
-    margin-right: 20px;
-    left: 0px;
-    height: auto;
-  }
-  .item {
-    margin-bottom: 50px;
-  }
-}
 
 @media (min-width: 950px) and (max-width: 1024px) {
   .section-name {
@@ -831,6 +820,10 @@ nav {
   .section-name {
     margin-top: 100px;
   }
+  .nav-1{
+    margin-left: -25px;
+    width: -webkit-fill-available;
+  }
   .home-back {
     width: 30%;
     margin-left: -150px;
@@ -1025,6 +1018,12 @@ nav {
 @media (min-width: 360px) and (max-width: 375px) {
   .section-name {
     margin-top: 100px;
+  }
+  .nav-1{
+    width: 350px;
+    justify-content: center;
+    display: flex;
+    margin-left: -30px;
   }
   .login {
     margin-left: auto;
