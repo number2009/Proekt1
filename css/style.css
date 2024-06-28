@@ -186,6 +186,17 @@ button.popup-btn {
   margin-top: 100px;
   background: linear-gradient(60deg, orange, yellow);
 }
+.product-desert {
+  height: 350px;
+  width: 25.2%;
+  vertical-align: top;
+  position: relative;
+  justify-content: center;
+  border-radius: 20px;
+  border: 2px solid black;
+  margin-top: 100px;
+  background: linear-gradient(60deg, rgb(234, 109, 238), rgb(218, 76, 123));
+}
 .product-link-vegetables {
   border: none;
   border-radius: 20px;
@@ -281,7 +292,7 @@ button.popup-btn {
 
 .product-description {
   margin: 15px;
-  height: 36px;
+  height: 70px;
   overflow-y: hidden;
   text-overflow: ellipsis;
 }
@@ -303,7 +314,7 @@ button.popup-btn {
   justify-content: space-between;
   align-items: center;
   gap: 35px;
-  margin-top: 70px;
+  margin-top: 40px;
 }
 
 .product-button {
@@ -727,6 +738,11 @@ nav {
     margin-left: 35px;
     margin-right: 35px;
   }
+  .product-desert {
+    width: 38%;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
   .product-voda {
     width: 38%;
     margin-left: 35px;
@@ -756,6 +772,11 @@ nav {
     margin-left: 35px;
     margin-right: 35px;
   }
+  .product-desert {
+    width: 38%;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
   .product-voda {
     width: 38%;
     margin-left: 35px;
@@ -781,6 +802,11 @@ nav {
     gap: 30px;
   }
   .product {
+    width: 38%;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  .product-desert {
     width: 38%;
     margin-left: 35px;
     margin-right: 35px;
@@ -815,6 +841,11 @@ nav {
     gap: 30px;
   }
   .product {
+    width: 38%;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  .product-desert {
     width: 38%;
     margin-left: 35px;
     margin-right: 35px;
@@ -880,6 +911,9 @@ nav {
   }
 
   .product {
+    width: 90%;
+  }
+  .product-desert {
     width: 90%;
   }
   .product-voda {
@@ -1041,6 +1075,10 @@ nav {
     width: 80%;
     margin-left: 10%;
   }
+  .product-desert {
+    width: 80%;
+    margin-left: 10%;
+  }
   .product-voda {
     width: 80%;
     margin-left: 10%;
@@ -1065,7 +1103,7 @@ nav {
   }
 
   .product-buy {
-    margin-top: 80px;
+    margin-top: 50px;
   }
   .product-buy-voda {
     margin-top: 145px;
@@ -1296,6 +1334,10 @@ nav {
     width: 80%;
     margin-left: 10%;
   }
+  .product-desert {
+    width: 80%;
+    margin-left: 10%;
+  }
   .product-voda {
     width: 80%;
     margin-left: 10%;
@@ -1323,7 +1365,7 @@ nav {
   }
 
   .product-buy {
-    margin-top: 100px;
+    margin-top: 70px;
   }
   .product-buy-voda {
     margin-top: 170px;
