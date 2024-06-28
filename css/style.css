@@ -1157,6 +1157,7 @@ nav {
 @media (min-width: 360px) and (max-width: 375px) {
   .section-name {
     margin-top: 100px;
+    margin-bottom: revert;
   }
   .nav-1{
     width: 350px;
