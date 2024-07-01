@@ -1637,7 +1637,23 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    font-size: 18px;
+    font-size: 16px;
+}
+.nav-2 .item {
+    position: relative;
+    display: inline-block;
+    width: 82px;
+    height: 35px;
+    padding-top: 15px;
+    margin-left: 7px;
+    margin-right: 7px;
+    background: transparent;
+    z-index: 2;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
 }
   .info{
     display: flex;
