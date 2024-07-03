@@ -1542,6 +1542,23 @@ input:valid {
     margin: 0;
     padding: 0;
 }
+.form-group {
+  --active: 0;
+  container-type: inline-size;
+  flex: 1;
+  margin-bottom: 60px;
+  width: 100%;
+}
+.title-sign{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  font-size: 30px;
+  color: #fcce04;
+  width: 100%;
+}
   .menu-list {
     display: flex;
     flex-direction: row;
