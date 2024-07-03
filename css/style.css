@@ -67,58 +67,13 @@ ul {
   padding-top: 5px;
 }
 
-.popup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 80px;
-}
 
-.popup-container {
-  width: 45%;
-  height: 350px;
-  background-color: azure;
-  border: 2px solid red;
-  border-radius: 20px;
-  padding: 20px;
-  margin-top: 70px;
-}
 .form {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.popup-btns {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 15px;
-}
-.popup-btn {
-  display: block;
-  width: 70px;
-  height: 35px;
-  background-color: #2e8b57;
-  border-radius: 15px;
-  border: 2px solid #2e8b57;
-  color: white;
-  text-align: center;
-  padding-top: 5px;
-  font-size: 16px;
-}
 
-button.popup-btn {
-  padding-top: 0;
-}
-.form > input {
-  outline: none;
-  height: 30px;
-  border-radius: 15px;
-  padding-left: 10px;
-}
-.popup-title {
-  text-align: center;
-  margin-bottom: 20px;
-}
 
 .menu-list {
   display: flex;
@@ -162,6 +117,7 @@ button.popup-btn {
   background-color: rgb(255, 255, 255);
   row-gap: 0px;
   column-gap: 35px;
+  justify-content: center;
 }
 .product-vegetables {
   height: 215px;
@@ -255,7 +211,6 @@ button.popup-btn {
 .product-detail-image-voda {
   width: 350px;
   height: 350px;
-
   display: flex;
   margin-top: -30px;
 }
@@ -678,51 +633,110 @@ nav {
   color: #0000ff;
 }
 
+:root {
+  --valid: hsl(133, 100%, 50%);
+  --invalid: hsl(10, 100%, 50%);
+  --input: hsl(0, 0%, 0%);
+}
+.body-sign{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-group {
+  --active: 0;
+  container-type: inline-size;
+  flex: 1;
+  margin-bottom: 60px;
+  width: 120%;
+}
+
+form {
+  width: 40ch;
+}
+input {
+  --is-valid: 0;
+  --is-invalid: 0;
+  background: linear-gradient(var(--input), var(--input)) padding-box,
+    linear-gradient(var(--invalid), var(--invalid))
+      calc((1 - var(--is-invalid)) * -100cqi) 0 / 100% 100% border-box,
+    linear-gradient(var(--valid), var(--valid))
+      calc((1 - var(--is-valid)) * 100cqi) 0 / 100% 100% border-box,
+    var(--input);
+  border: 2px solid transparent;
+  font-size: 1rem;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  font-family: "Geist Sans", "SF Pro", sans-serif;
+  font-weight: 40;
+  background-color: #3b4148;
+  border-radius: 10px;
+  color: #a9a9a9;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 100%;
+  outline: 0;
+  height: 50px;
+}
+label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  padding-left: 5px;
+  opacity: calc(var(--active) + 0.45);
+  transition: opacity 0.5s;
+}
+
+.form-group:focus-within {
+  --active: 1;
+}
+
+input:invalid:not(:placeholder-shown):not(:focus-visible) {
+  --is-invalid: 1;
+}
+
+input:valid {
+  --is-valid: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  input {
+    transition: background-position 0.5s;
+  }
+}
+.submitbtn {
+  background: #2a292c;
+  border: 0;
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+.submitbtn:hover {
+  background: #404949;
+}
+.title-sign{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  font-size: 30px;
+  color: #fcce04;
+  width: 120%;
+}
 @media (min-width: 950px) and (max-width: 1024px) {
   .section-name {
     margin-top: 100;
-  }
-  .popup-container {
-    width: 65%;
-    height: 350px;
-    background-color: azure;
-    border: 2px solid red;
-    border-radius: 20px;
-    padding: 20px;
-    z-index: 10000;
   }
   .form {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
-  .popup-btns {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 15px;
-  }
-  .popup-btn {
-    display: block;
-    width: 70px;
-    height: 35px;
-    background-color: #2e8b57;
-    border-radius: 15px;
-    border: 2px solid #2e8b57;
-    color: white;
-    text-align: center;
-    padding-top: 5px;
-    font-size: 16px;
-  }
+  
 
-  button.popup-btn {
-    padding-top: 0;
-  }
-  .form > input {
-    outline: none;
-    height: 30px;
-    border-radius: 15px;
-    padding-left: 10px;
-  }
 
   .product-buy {
     margin-top: 40px;
@@ -855,47 +869,7 @@ nav {
     margin-left: 35px;
     margin-right: 35px;
   }
-  .popup-container {
-    width: 70%;
-    height: 310px;
-    background-color: azure;
-    border: 2px solid red;
-    border-radius: 20px;
-    padding: 20px;
-    z-index: 10000;
-  }
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  .popup-btns {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 15px;
-  }
-  .popup-btn {
-    display: block;
-    width: 70px;
-    height: 35px;
-    background-color: #2e8b57;
-    border-radius: 15px;
-    border: 2px solid #2e8b57;
-    color: white;
-    text-align: center;
-    padding-top: 5px;
-    font-size: 16px;
-  }
-
-  button.popup-btn {
-    padding-top: 0;
-  }
-  .form > input {
-    outline: none;
-    height: 30px;
-    border-radius: 15px;
-    padding-left: 10px;
-  }
+  
   ul {
     margin-left: 0;
   }
@@ -911,6 +885,23 @@ nav {
     flex-direction: row;
     justify-content: space-evenly;
     font-size: 20px;
+  }
+  .form-group {
+  --active: 0;
+  container-type: inline-size;
+  flex: 1;
+  margin-bottom: 60px;
+  width: 100%;
+}
+.title-sign{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  font-size: 30px;
+  color: #fcce04;
+  width: 100%;
 }
   .info{
     display: flex;
@@ -940,47 +931,7 @@ nav {
   .home-back {
     width: 100%;
   }
-  .popup-container {
-    width: 85%;
-    height: 250px;
-    background-color: azure;
-    border: 2px solid red;
-    border-radius: 20px;
-    padding: 20px;
-    z-index: 10000;
-  }
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  .popup-btns {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 15px;
-  }
-  .popup-btn {
-    display: block;
-    width: 70px;
-    height: 35px;
-    background-color: #2e8b57;
-    border-radius: 15px;
-    border: 2px solid #2e8b57;
-    color: white;
-    text-align: center;
-    padding-top: 5px;
-    font-size: 16px;
-  }
-
-  button.popup-btn {
-    padding-top: 0;
-  }
-  .form > input {
-    outline: none;
-    height: 30px;
-    border-radius: 15px;
-    padding-left: 10px;
-  }
+  
   .https-home {
     display: block;
     position: absolute;
@@ -1152,6 +1103,23 @@ nav {
     justify-content: space-evenly;
     font-size: 20px;
 }
+.form-group {
+  --active: 0;
+  container-type: inline-size;
+  flex: 1;
+  margin-bottom: 60px;
+  width: 105%;
+}
+.title-sign{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  font-size: 30px;
+  color: #fcce04;
+  width: 105%;
+}
   .info{
     display: flex;
     flex-direction: column;
@@ -1180,47 +1148,7 @@ nav {
   .home-back {
     width: 100%;
   }
-  .popup-container {
-    width: 85%;
-    height: 250px;
-    background-color: azure;
-    border: 2px solid red;
-    border-radius: 20px;
-    padding: 20px;
-    z-index: 10000;
-  }
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  .popup-btns {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 15px;
-  }
-  .popup-btn {
-    display: block;
-    width: 70px;
-    height: 35px;
-    background-color: #2e8b57;
-    border-radius: 15px;
-    border: 2px solid #2e8b57;
-    color: white;
-    text-align: center;
-    padding-top: 5px;
-    font-size: 16px;
-  }
-
-  button.popup-btn {
-    padding-top: 0;
-  }
-  .form > input {
-    outline: none;
-    height: 30px;
-    border-radius: 15px;
-    padding-left: 10px;
-  }
+  
   .https-home {
     display: block;
     position: absolute;
@@ -1392,6 +1320,23 @@ nav {
     justify-content: space-evenly;
     font-size: 18px;
 }
+.form-group {
+  --active: 0;
+  container-type: inline-size;
+  flex: 1;
+  margin-bottom: 60px;
+  width: 100%;
+}
+.title-sign{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  font-size: 30px;
+  color: #fcce04;
+  width: 100%;
+}
   .info{
     display: flex;
     flex-direction: column;
@@ -1420,47 +1365,7 @@ nav {
   .home-back {
     width: 100%;
   }
-  .popup-container {
-    width: 85%;
-    height: 250px;
-    background-color: azure;
-    border: 2px solid red;
-    border-radius: 20px;
-    padding: 20px;
-    z-index: 10000;
-  }
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  .popup-btns {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 15px;
-  }
-  .popup-btn {
-    display: block;
-    width: 70px;
-    height: 35px;
-    background-color: #2e8b57;
-    border-radius: 15px;
-    border: 2px solid #2e8b57;
-    color: white;
-    text-align: center;
-    padding-top: 5px;
-    font-size: 16px;
-  }
-
-  button.popup-btn {
-    padding-top: 0;
-  }
-  .form > input {
-    outline: none;
-    height: 30px;
-    border-radius: 15px;
-    padding-left: 10px;
-  }
+  
   .https-home {
     display: block;
     position: absolute;
@@ -1655,6 +1560,7 @@ nav {
     transition: 0.3s ease-in-out;
     -webkit-transition: 0.3s ease-in-out;
 }
+
   .info{
     display: flex;
     flex-direction: column;
@@ -1683,47 +1589,7 @@ nav {
   .home-back {
     width: 100%;
   }
-  .popup-container {
-    width: 85%;
-    height: 250px;
-    background-color: azure;
-    border: 2px solid red;
-    border-radius: 20px;
-    padding: 20px;
-    z-index: 10000;
-  }
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  .popup-btns {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 15px;
-  }
-  .popup-btn {
-    display: block;
-    width: 70px;
-    height: 35px;
-    background-color: #2e8b57;
-    border-radius: 15px;
-    border: 2px solid #2e8b57;
-    color: white;
-    text-align: center;
-    padding-top: 5px;
-    font-size: 16px;
-  }
-
-  button.popup-btn {
-    padding-top: 0;
-  }
-  .form > input {
-    outline: none;
-    height: 30px;
-    border-radius: 15px;
-    padding-left: 10px;
-  }
+  
   .https-home {
     display: block;
     position: absolute;
@@ -1788,10 +1654,7 @@ nav {
     margin: 25px auto 50px -75px;
   }
   .product-detail-image-voda {
-    width: 345px;
-    height: 300px;
-    margin-top: auto;
-    margin-bottom: 25px;
+    width: 270px;
   }
   .product-detail-img-voda {
     display: flex;
