@@ -632,7 +632,6 @@ nav {
 .nav-2 .item:hover .large {
   color: #0000ff;
 }
-
 :root {
   --valid: hsl(133, 100%, 50%);
   --invalid: hsl(10, 100%, 50%);
@@ -890,6 +889,9 @@ input:valid {
     justify-content: space-evenly;
     font-size: 20px;
   }
+.home-back-autoriz{
+  width: 10%;
+}
   .form-group {
   --active: 0;
   container-type: inline-size;
@@ -1107,12 +1109,15 @@ input:valid {
     justify-content: space-evenly;
     font-size: 20px;
 }
+.home-back-autoriz{
+  width: 10%;
+}
 .form-group {
   --active: 0;
   container-type: inline-size;
   flex: 1;
   margin-bottom: 60px;
-  width: 105%;
+  width: 100%;
 }
 .title-sign{
   display: flex;
@@ -1122,7 +1127,10 @@ input:valid {
   font-weight: 400;
   font-size: 30px;
   color: #fcce04;
-  width: 105%;
+  width: 100%;
+}
+form{
+  width: 45ch;
 }
   .info{
     display: flex;
@@ -1323,6 +1331,9 @@ input:valid {
     flex-direction: row;
     justify-content: space-evenly;
     font-size: 18px;
+}
+.home-back-autoriz{
+  width: 10%;
 }
 .form-group {
   --active: 0;
@@ -1542,6 +1553,9 @@ input:valid {
     margin: 0;
     padding: 0;
 }
+.home-back-autoriz{
+  width: 10%;
+}
 .form-group {
   --active: 0;
   container-type: inline-size;
@@ -1558,6 +1572,9 @@ input:valid {
   font-size: 30px;
   color: #fcce04;
   width: 100%;
+}
+form{
+  width: 35ch;
 }
   .menu-list {
     display: flex;
