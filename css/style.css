@@ -120,14 +120,16 @@ ul {
   justify-content: center;
 }
 .product-vegetables {
-  height: 215px;
-  width: 150px;
-  vertical-align: top;
-  position: relative;
-  justify-content: center;
-
-  margin-top: 50px;
+    display: flex;
+    height: 215px;
+    width: 150px;
+    vertical-align: top;
+    position: relative;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: stretch;
 }
+
 .product-img-vegetables {
   width: 75%;
 }
@@ -436,6 +438,8 @@ ul {
 .nav-1 nav {
   background: #d3d3d3;
   border-radius: 30px;
+  display: flex;
+  flex-wrap: nowrap;
 }
 nav {
   position: relative;
@@ -520,6 +524,8 @@ nav {
   color: #ffffff;
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .nav-1 .item:hover .small {
