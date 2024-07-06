@@ -52,6 +52,28 @@ ul {
   height: 35px;
   margin-right: 10px;
 }
+.hit-list{
+  overflow: hidden;
+  border: 5px solid rgb(122, 121, 121);
+  background-color: #f39ad8;
+  border-radius: 8px;
+  width: 70%;
+  margin-left: 200px;
+  margin-top: 50px;
+}
+.hit-list-img{
+  width: 150px;
+}
+.wrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  animation: scroll 15s linear infinite;
+}
+@keyframes scroll{
+  to{
+    translate: calc(-4 * 275px);
+  }
+}
 .contanier {
   margin-bottom: 180px;
 }
@@ -79,7 +101,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  font-size: 16px;
+  font-size: 20px;
 }
 .name-voda {
   margin-bottom: 30px;
@@ -94,7 +116,10 @@ ul {
   color: orange;
   border: 2px solid rgb(212, 224, 32);
 }
-
+.menu-list-item-link:focus {
+  background-color: #fffb00;
+  border: 2px solid black;
+}
 .eat {
   display: flex;
   flex-direction: column;
@@ -650,7 +675,6 @@ nav {
 }
 .form-group {
   --active: 0;
-  container-type: inline-size;
   flex: 1;
   margin-bottom: 60px;
   width: 120%;
@@ -900,7 +924,6 @@ input:valid {
 }
   .form-group {
   --active: 0;
-  container-type: inline-size;
   flex: 1;
   margin-bottom: 60px;
   width: 100%;
@@ -1118,9 +1141,21 @@ input:valid {
 .home-back-autoriz{
   width: 10%;
 }
+.hit-list {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 50px;
+}
+.hit-list-img {
+    width: 120px;
+}
+@keyframes scroll{
+  to{
+    translate: calc(-4 * 210px);
+  }
+}
 .form-group {
   --active: 0;
-  container-type: inline-size;
   flex: 1;
   margin-bottom: 60px;
   width: 100%;
@@ -1338,12 +1373,24 @@ form{
     justify-content: space-evenly;
     font-size: 18px;
 }
+.hit-list {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 50px;
+}
+.hit-list-img {
+    width: 110px;
+}
+@keyframes scroll{
+  to{
+    translate: calc(-4 * 200px);
+  }
+}
 .home-back-autoriz{
   width: 10%;
 }
 .form-group {
   --active: 0;
-  container-type: inline-size;
   flex: 1;
   margin-bottom: 60px;
   width: 100%;
@@ -1562,9 +1609,21 @@ form{
 .home-back-autoriz{
   width: 10%;
 }
+.hit-list {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 50px;
+}
+.hit-list-img {
+    width: 120px;
+}
+@keyframes scroll{
+  to{
+    translate: calc(-4 * 210px);
+  }
+}
 .form-group {
   --active: 0;
-  container-type: inline-size;
   flex: 1;
   margin-bottom: 60px;
   width: 100%;
