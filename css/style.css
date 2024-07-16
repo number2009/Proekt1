@@ -34,7 +34,19 @@ ul {
   display: flex;
   align-items: center;
 }
-
+.menu{
+  position: sticky;
+  z-index: 10;
+  width: 100%;
+  top: 0px;
+  height: 50px;
+  background-color: white;
+}
+.menu-list-item{
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
 .phone {
   display: flex;
   align-items: center;
@@ -1498,8 +1510,8 @@ form{
     margin: 25px auto 50px -75px;
   }
   .product-detail-image-voda {
-    width: 345px;
-    height: 300px;
+    width: 280px;
+    height: 235px;
     margin-top: auto;
     margin-bottom: 25px;
   }
