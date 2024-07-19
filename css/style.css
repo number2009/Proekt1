@@ -36,6 +36,7 @@ ul {
 }
 .menu{
   position: sticky;
+  position: -webkit-sticky;
   z-index: 10;
   width: 100%;
   top: 0px;
@@ -119,7 +120,7 @@ ul {
   margin-bottom: 30px;
 }
 .menu-list-item-link {
-  padding: 10px;
+  padding: 12%;
   border: 2px solid transparent;
   border-radius: 10px;
 }
