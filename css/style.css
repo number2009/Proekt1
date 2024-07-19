@@ -580,6 +580,8 @@ nav {
 .nav-2 nav {
   background: #d3d3d3;
   border-radius: 30px;
+  display: flex;
+  flex-wrap: nowrap;
 }
 nav {
   position: relative;
