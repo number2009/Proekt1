@@ -40,15 +40,15 @@
             <p class="description-header">30 см, традиционное тесто 30, 590 г</p>
             <p class="description-main">Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо</p>
           <section class="nav-1">
-              <nav>
+              <nav class="size-list">
                  <a class="item" href="#nav-1">
-                    <div class="linktext small">Маленькая</div>
+                    <div class="linktext small" id="1">Маленькая</div>
+                </a>
+                <a class="item" href="#nav-1" >
+                   <div class="linktext average" id="2">Средняя</div>
                 </a>
                 <a class="item" href="#nav-1">
-                   <div class="linktext average">Средняя</div>
-                </a>
-                <a class="item" href="#nav-1">
-                    <div class="linktext large">Большая</div>
+                    <div class="linktext large" id="3">Большая</div>
                 </a>
     
               </nav>
@@ -188,6 +188,6 @@
       current = option.index;
       }));
     </script>
-    
+      <script src="./js/app.js" defer></script>
   </body>
 </html>
