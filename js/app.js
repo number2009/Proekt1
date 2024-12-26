@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (basketItem.productId != event.target.id) {
         basketItem.push(event.target.id);
       }
-      //console.log(basketItem);
+      console.log(basketItem);
     });
   }
 
