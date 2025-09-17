@@ -1,422 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="ru">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/favicon.png" />
+    <!-- Подключение Font Awesome для иконок сердца -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <title>Pizza</title>
-  </head>
-  <body>
-    <div class="page">
-      <header>
-        <div class="header-title">
-          <div class="header-block">
-            <img src="./images/i.webp" alt="логотип" class="title-img" />
-            <h1>Русская пицца</h1>
-          </div>
-          <a href="tel:+8999372009" class="phone">
-            <img src="./images/phone.gif" class="phone-img" />+8 999 372 009
-          </a>
-          <a href="./autorization.html" class="login"> Вход </a>
-        </div>
-        <hr class="header-line" />
-        <div class="menu">
-          <ul class="menu-list" id="eat-click-number1">
-            <li class="menu-list-item">
-              <a href="#pizza" class="menu-list-item-link"> Пиццы </a>
-            </li>
-            <li class="menu-list-item">
-              <a href="#voda" class="menu-list-item-link">Напитки</a>
-            </li>
-            <li class="menu-list-item">
-              <a href="#desert" class="menu-list-item-link">Десерты</a>
-            </li>
-            <li class="menu-list-item">
-              <a href="#" class="menu-list-item-link">Скоро</a>
-            </li>
-          </ul>
-        </div>
+    <title>Happy House</title>
+    
+</head>
+<body>
+    <!-- Пример зеленого экрана, который нужно скрыть -->
+    <div id="greenScreen" class="green-screen"></div>
 
-        <h2 class="section-name">Хиты Дня!</h2>
+    <div Нажми id="clickPromptTitle" class="click-prompt-title">Сурприз!</div>
 
-        <div class="hit-list">
-          <div class="wrapper">
-            <img src="https://media.dodostatic.net/image/r:233x233/11EE7D612FC7B7FCA5BE822752BEE1E5.avif" alt="brand1" class="hit-list-img">
-            <img src="https://media.dodostatic.net/image/r:233x233/11EE7D60FDA22358AC33C6A44EB093A2.avif" alt="brand2" class="hit-list-img">
-            <img src="https://media.dodostatic.net/image/r:233x233/11EE796FB18AFBBEBF188C25EBD2E581.avif" alt="brand3" class="hit-list-img">
-            <img src="https://media.dodostatic.net/image/r:233x233/11EEE20B6B6EC471AB74AB8F8885775B.avif" alt="brand4" class="hit-list-img">
+    <div Нажми id="clickPrompt" class="click-prompt">⬇ Нажми ⬇</div>
 
-            <img src="https://media.dodostatic.net/image/r:233x233/11EE7D61AAE50A4CB880D842915C82DC.avif" alt="" class="hit-list-img">
-            <img src="https://media.dodostatic.net/image/r:233x233/11EE7D61B85ADB349AAD5044EC2803AE.avif" alt="" class="hit-list-img">
-            <img src="https://media.dodostatic.net/image/r:233x233/11EE7D61AD5C2FCFBBBB6AA525E38A04.avif" alt="" class="hit-list-img">
-          </div>
-        </div>
-      </header>
-      <main>
-        <div class="contanier">
-          <div class="eat">
-            <h2 class="section-name" id="pizza">Пицца</h2>
-            <div class="products">
-              <div class="product">
-                <a href="./cheese_eat.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7D610D2925109AB2E1C92CC5383C.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Сырная</h3>
-
-                  <p class="product-description">
-                    Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо
-                  </p>
-                  <div class="product-buy">
-                    <button class="product-button" id="buy1">Купить</button>
-                    <p class="product-price">От 179 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product">
-                <a href="./peperoni_eat.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7D612FC7B7FCA5BE822752BEE1E5.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Пепперони фреш</h3>
-                  <p class="product-description">
-                    Пикантная пепперони, увеличенная порция моцареллы, томаты,
-                    фирменный томатный соус
-                  </p>
-
-                  <div class="product-buy">
-                    <button class="product-button" id="buy2">Купить</button>
-                    <p class="product-price">От 299 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product">
-                <a href="./chicken_eat.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7D614CBE0530B7234B6D7A6E5F8E.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Двойной цыпленок</h3>
-                  <p class="product-description">
-                    Цыпленок, моцарелла, фирменный соус альфредо
-                  </p>
-                  <div class="product-buy">
-                    <button class="product-button" id="buy3">Купить</button>
-                    <p class="product-price">От 249 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product">
-                <a href="./cheeseHam_eat.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7D60FDA22358AC33C6A44EB093A2.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Ветчина и сыр</h3>
-
-                  <p class="product-description">
-                    Ветчина, моцарелла, фирменный соус альфредо
-                  </p>
-                  <div class="product-buy">
-                    <button class="product-button" id="buy4">Купить</button>
-                    <p class="product-price">От 199 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product">
-                <a href="./meat_eat.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7D6108E3A1C9952CD3A7F39A4D02.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Мясная</h3>
-
-                  <p class="product-description">
-                    Цыпленок, ветчина, пикантная пепперони, острые колбаски
-                    чоризо, моцарелла, фирменный томатный соус
-                  </p>
-                  <div class="product-buy">
-                    <button class="product-button" id="buy5">Купить</button>
-                    <p class="product-price">От 169 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product">
-                <a href="./hawaiian_eat.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7D617E9339CFB185921A343AD8FD.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Гавайская</h3>
-
-                  <p class="product-description">
-                    Двойная порция цыпленка, ананасы, моцарелла, фирменный соус
-                    альфредо
-                  </p>
-                  <div class="product-buy">
-                    <button class="product-button" id="buy6">Купить</button>
-                    <p class="product-price">От 149 Руб</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="napitkiosnova">
-            <h2 class="section-name" id="voda">Напитки</h2>
-            <div class="products">
-              <div class="product-voda">
-                <a href="./godCola_voda.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7D61823BE0D3A35B4ABF658FD06B.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Добрый кола</h3>
-
-                  <div class="product-buy-voda">
-                    <button class="product-button" id="buy1">Купить</button>
-                    <p class="product-price">От 99 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product-voda">
-                <a href="./godOrange_voda.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7D61AAE50A4CB880D842915C82DC.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Добрый Апельсин</h3>
-
-                  <div class="product-buy-voda">
-                    <button class="product-button" id="buy2">Купить</button>
-                    <p class="product-price">От 59 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product-voda">
-                <a href="./godLime_voda.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7D61BAB86255A811FEEA677AD674.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Добрый Лайм-Лимон</h3>
-
-                  <div class="product-buy-voda">
-                    <button class="product-button" id="buy3">Купить</button>
-                    <p class="product-price">От 79 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product-voda">
-                <a href="./godBlackTea_voda.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7D61AD5C2FCFBBBB6AA525E38A04.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Rich Tea Черный с лимоном</h3>
-
-                  <div class="product-buy-voda">
-                    <button class="product-button" id="buy4">Купить</button>
-                    <p class="product-price">От 59 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product-voda">
-                <a href="./godGreenTea_voda.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7D61AB1F976991362A5A42A2613E.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Rich Tea Зеленый</h3>
-
-                  <div class="product-buy-voda">
-                    <button class="product-button" id="buy5">Купить</button>
-                    <p class="product-price">От 45 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product-voda">
-                <a href="./godVoda_voda.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EEE20B3F64A6B8A0418FF967C69F72.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Вода BonaAqua</h3>
-
-                  <div class="product-buy-voda">
-                    <button class="product-button" id="buy6">Купить</button>
-                    <p class="product-price">От 29 Руб</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="desert">
-            <h2 class="section-name" id="desert">Десерты</h2>
-            <div class="products">
-              <div class="product-desert">
-                <a href="./desert_kake.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EEE20B6B6EC471AB74AB8F8885775B.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Чизкейк Нью-Йорк</h3>
-
-                  <p class="product-description">
-                    Мы перепробовали тысячу десертов и наконец нашли любимца гостей — нежнейший творожный чизкейк
-                  </p>
-                  <div class="product-buy">
-                    <button class="product-button" id="buy1">Купить</button>
-                    <p class="product-price">От 99 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product-desert">
-                <a href="./desert_kake_banana.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE797014D8F94683D580455892ABA1.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Банановый чизкейк</h3>
-                  <p class="product-description">
-                    Солнечный снаружи и яркий по вкусу внутри. Летняя новинка — нежный чизкейк с бананом.
-                  </p>
-
-                  <div class="product-buy">
-                    <button class="product-button" id="buy2">Купить</button>
-                    <p class="product-price">От 69 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product-desert">
-                <a href="./desert_chocalate.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE796FB18AFBBEBF188C25EBD2E581.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Маффин Три шоколада</h3>
-                  <p class="product-description">
-                    Ну и кекс этот маффин! Он из натурального какао, а внутри — нежная начинка из кубиков белого шоколада
-                  </p>
-                  <div class="product-buy">
-                    <button class="product-button" id="buy3">Купить</button>
-                    <p class="product-price">От 109 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product-desert">
-                <a href="./desert_fontan.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7D61B85ADB349AAD5044EC2803AE.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Фондан</h3>
-
-                  <p class="product-description">
-                    Четверо из пяти гостей говорят «Oh la la!», когда едят этот французский десерт с хрустящей корочкой.
-                  </p>
-                  <div class="product-buy">
-                    <button class="product-button" id="buy4">Купить</button>
-                    <p class="product-price">От 99 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product-desert">
-                <a href="./desert_sloy.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE796FFF9F5E6EB14E281FC5F491EC.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Слоеные палочки с ананасами</h3>
-
-                  <p class="product-description">
-                    Здесь все сразу — брусника и ананас со сгущенкой на слоеном тесте
-                  </p>
-                  <div class="product-buy">
-                    <button class="product-button" id="buy5">Купить</button>
-                    <p class="product-price">От 149 Руб</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product-desert">
-                <a href="./desert_kyki.html" class="product-link">
-                  <img
-                    src="https://media.dodostatic.net/image/r:233x233/11EE7970210A7A54AFF74B239EA3D66F.avif"
-                    class="product-img"
-                  />
-                  <h3 class="product-name">Шоколадный кукис</h3>
-
-                  <p class="product-description">
-                    На вид печенье как планета, а на вкус — шоколадная комета с глазурью
-                  </p>
-                  <div class="product-buy">
-                    <button class="product-button" id="buy6">Купить</button>
-                    <p class="product-price">От 149 Руб</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <footer>
-        <div class="menu">
-          <ul class="menu-list" id="eat-click-number2">
-            <li class="menu-list-item">
-              <a href="#pizza" class="menu-list-item-link"> Пиццы </a>
-            </li>
-            <li class="menu-list-item">
-              <a href="#voda" class="menu-list-item-link">Напитки</a>
-            </li>
-            <li class="menu-list-item">
-              <a href="#desert" class="menu-list-item-link">Десерты</a>
-            </li>
-            <li class="menu-list-item">
-              <a href="#" class="menu-list-item-link">Скоро</a>
-            </li>
-          </ul>
-        </div>
-        <hr class="footer-line" />
-        <div class="footer-menu">
-          <div class="footer-menu-block">
-            <h3>Наши соцсети</h3>
-            <ul class="footer-menu-list">
-              <li class="footer-menu-list-item">
-                <a href="#" class="footer-menu-list-item-link">
-                  <img
-                    src="./images/vk.svg"
-                    class="footer-menu-list-item-link-img"
-                  />
-                </a>
-              </li>
-              <li class="footer-menu-list-item">
-                <a href="#" class="footer-menu-list-item-link">
-                  <img
-                    src="./images/telegram.svg"
-                    class="footer-menu-list-item-link-img"
-                  />
-                </a>
-              </li>
-              <li class="footer-menu-list-item">
-                <a href="#" class="footer-menu-list-item-link">
-                  <img
-                    src="./images/tw.svg"
-                    class="footer-menu-list-item-link-img"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-menu-block" id="footer-menu-info">
-            <h3>Контакты</h3>
-          </div>
-        </div>
-
-        <div class="footer-text">&copy; Copyright 2024.</div>
-      </footer>
-      
+    <!-- Новое "сердце-кнопка" -->
+    <div id="startButtonHeart" class="heart">
+        <i class="fa-solid fa-heart"></i>
     </div>
-  </body>
+
+    <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div>
+
+    <!-- Твой основной код -->
+    <div class="Happy">
+      <h1 class="titleFrame">С днем рождения!</h1>
+      <div class="FrameVideo">
+        <video class="video" controls>
+          <source src="videos/video_2025-09-17_14-03-32.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="sub_titre">
+        <p class="titre">
+          Loading...
+        </p>
+      </div>
+    </div>
+
+    <script src="./js/app.js" defer></script>
+    <script src="./css/style.css" defer></script>
+</body>
 </html>
