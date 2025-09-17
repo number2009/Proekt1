@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Скрываем зеленый экран, сердце И текст-подсказку
     greenScreen.classList.add("hidden");
     startButtonHeart.classList.add("hidden"); // Скрываем сердце
-    clickPrompt.classList.add("hidden");    //Скрываем текст-подсказку
-    clickPromptTitle.classList.add('hidden');
+    clickPrompt.classList.add("hidden"); //Скрываем текст-подсказку
+    clickPromptTitle.classList.add("hidden");
 
     const backgroundHTML = `
         <div class="area" >
@@ -120,8 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // --- ЗАПУСК ПЕЧАТАНИЯ ТЕКСТА ТОЛЬКО ПОСЛЕ НАЖАТИЯ КНОПКИ ---
     typingElement.textContent = ""; // Очищаем "Loading..."
-    currentTextArrayIndex = 0;    // Сбрасываем индекс, чтобы начать с первого текста
-    isTypingActive = false;       // Сбрасываем флаг активности
+    currentTextArrayIndex = 0; // Сбрасываем индекс, чтобы начать с первого текста
+    isTypingActive = false; // Сбрасываем флаг активности
 
     if (textArray.length > 0) {
       const [firstText, firstTime] = textArray[currentTextArrayIndex];
