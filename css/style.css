@@ -109,9 +109,9 @@ ul {
             font-size: 90px;
             animation: beat 0.9s infinite;
             text-shadow:
-                0 0 170px rgb(255, 0, 0),
-                0 0 250px rgb(255, 0, 0),
-                0 0 300px rgb(255, 0, 0);
+                0 0 100px rgb(151, 0, 0),
+                0 0 100px rgb(151, 0, 0),
+                0 0 100px rgb(151, 0, 0);
             filter: drop-shadow(1px 1px 10px rgb(255, 0, 0));
         } 
 
