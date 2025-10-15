@@ -19,7 +19,7 @@ ul {
   list-style: none; /*Уберает маркеры*/
 }
 .titre {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bolder;
 }
 
@@ -32,6 +32,7 @@ ul {
   height: 400px;
   box-shadow: 0px 0px 0px 4px rgb(255, 255, 0);
   border-radius: 10px;
+  z-index: 99;
 }
 
 .sub_titre {
@@ -142,8 +143,8 @@ ul {
     position: absolute;
     display: block;
     list-style: none;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-size: cover; /* Добавляем */
     background-repeat: no-repeat; /* Добавляем */
     animation: animate 25s linear infinite;
@@ -152,8 +153,8 @@ ul {
 
 .circles li:nth-child(1){
     left: 25%;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     animation-delay: 0s;
     animation-duration: 15s;
 }
@@ -161,55 +162,40 @@ ul {
 
 .circles li:nth-child(2){
     left: 10%;
-    width: 90px;
-    height: 90px;
+    width: 50px;
+    height: 50px;
     animation-delay: 2s;
     animation-duration: 15s;
 }
 
 .circles li:nth-child(3){
     left: 70%;
-    width: 90px;
-    height: 90px;
+    width: 50px;
+    height: 50px;
     animation-delay: 4s;
     animation-duration: 15s;
 }
 
 .circles li:nth-child(4){
-    left: 90%;
-    width: 70px;
-    height: 70px;
-    animation-delay: 0s;
-    animation-duration: 18s;
-}
-
-.circles li:nth-child(5){
-    left: 25%;
-    width: 70px;
-    height: 70px;
-    animation-delay: 0s;
+    left: 60%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 4s;
     animation-duration: 15s;
 }
 
-.circles li:nth-child(6){
-    left: 85%;
-    width: 90px;
-    height: 90px;
-    animation-delay: 13s;
-    animation-duration: 15s;
-}
 
 
 @keyframes animate {
 
     0%{
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(0);
         opacity: 1;
         border-radius: 0;
     }
 
     100%{
-        transform: translateY(-1000px) rotate(160deg);
+        transform: translateY(-1000px);
         opacity: 0;
         border-radius: 25%;
     }

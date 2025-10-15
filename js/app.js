@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Функция для проверки времени видео
   function checkVideoTime() {
-    if (videoElement && videoElement.currentTime >= 5 && !typingStarted) {
+    if (videoElement && videoElement.currentTime >= 35 && !typingStarted) {
       startTypingAnimation();
       // Убираем обработчик после запуска печати
       videoElement.removeEventListener("timeupdate", checkVideoTime);
@@ -162,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Добавляем изображения в круги
     const circles = document.querySelectorAll(".circles li");
     const images = [
-      "images/Image1.jpg", // Замените на пути к вашим изображениям
       "images/Image2.jpg",
       "images/Image3.jpg",
       "images/Image4.jpg",
