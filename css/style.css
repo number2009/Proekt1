@@ -20,7 +20,7 @@ ul {
 }
 
 .titre {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bolder;
 }
 
@@ -256,4 +256,8 @@ canvas {
   top: 0;
   left: 0;
   z-index: 999;
+}
+
+@media (min-width: 430px) and (max-width: 932px) {
+
 }

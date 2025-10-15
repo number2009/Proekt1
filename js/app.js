@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const clickPromptTitle = document.getElementById("clickPromptTitle");
   const videoElement = document.querySelector(".video");
   const typingElement = document.querySelector(".titre");
-  const happyGui = document.getElementById('c')
 
   const container = document.querySelector(".container");
   const characters = "LOVE";
@@ -13,32 +12,32 @@ document.addEventListener("DOMContentLoaded", function () {
   const symbolsPerColumn = 20; // Количество символов в колонке
   let cooldownCount = 0;
 
-   function createColumn() {
-     const column = document.createElement("div");
-     column.classList.add("drop-column");
-     column.style.left = Math.random() * 100 + "vw";
-     column.style.animationDuration = Math.random() * 3 + 2 + "s";
+  function createColumn() {
+    const column = document.createElement("div");
+    column.classList.add("drop-column");
+    column.style.left = Math.random() * 100 + "vw";
+    column.style.animationDuration = Math.random() * 3 + 2 + "s";
 
-     for (let i = 0; i < symbolsPerColumn; i++) {
-       const symbol = document.createElement("span");
-       symbol.classList.add("symbol");
-       symbol.textContent =
-         characters[Math.floor(Math.random() * characters.length)];
-       symbol.style.color = "blueviolet";
-       column.appendChild(symbol);
-     }
+    for (let i = 0; i < symbolsPerColumn; i++) {
+      const symbol = document.createElement("span");
+      symbol.classList.add("symbol");
+      symbol.textContent =
+        characters[Math.floor(Math.random() * characters.length)];
+      symbol.style.color = "blueviolet";
+      column.appendChild(symbol);
+    }
 
-     container.appendChild(column);
+    container.appendChild(column);
 
-     column.addEventListener("animationend", () => {
-       column.remove();
-       createColumn();
-     });
-   }
+    column.addEventListener("animationend", () => {
+      column.remove();
+      createColumn();
+    });
+  }
 
-   for (let i = 0; i < columnCount; i++) {
-     createColumn();
-   }
+  for (let i = 0; i < columnCount; i++) {
+    createColumn();
+  }
 
   // --- Код для эффекта печатания текста ---
   const textsAndTimes = {
@@ -63,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const textArray = Object.entries(textsAndTimes);
   let currentTextArrayIndex = 0;
   let isTypingActive = false;
+  let typingStarted = false; // Флаг для отслеживания начала печати
 
   function typeWriter(text, timeInSeconds, callback) {
     if (isTypingActive) return;
@@ -106,12 +106,36 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Все тексты напечатаны!");
     }
   }
+
+  // Функция для запуска печати текста
+  function startTypingAnimation() {
+    if (typingStarted) return; // Если печать уже началась, выходим
+
+    typingStarted = true;
+    typingElement.textContent = ""; // Очищаем "Loading..."
+    currentTextArrayIndex = 0; // Сбрасываем индекс, чтобы начать с первого текста
+    isTypingActive = false; // Сбрасываем флаг активности
+
+    if (textArray.length > 0) {
+      const [firstText, firstTime] = textArray[currentTextArrayIndex];
+      typeWriter(firstText, firstTime, startNextTyping);
+    }
+  }
+
+  // Функция для проверки времени видео
+  function checkVideoTime() {
+    if (videoElement && videoElement.currentTime >= 5 && !typingStarted) {
+      startTypingAnimation();
+      // Убираем обработчик после запуска печати
+      videoElement.removeEventListener("timeupdate", checkVideoTime);
+    }
+  }
   // --- Конец кода для эффекта печатания текста ---
 
   startButtonHeart.addEventListener("click", function () {
     // Скрываем зеленый экран, сердце И текст-подсказку
     greenScreen.classList.add("hidden");
-    container.classList.add('hidden')
+    container.classList.add("hidden");
     startButtonHeart.classList.add("hidden"); // Скрываем сердце
     clickPrompt.classList.add("hidden"); //Скрываем текст-подсказку
     clickPromptTitle.classList.add("hidden");
@@ -151,16 +175,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Запускаем видео
     if (videoElement) {
       videoElement.play();
-    }
 
-    // --- ЗАПУСК ПЕЧАТАНИЯ ТЕКСТА ТОЛЬКО ПОСЛЕ НАЖАТИЯ КНОПКИ ---
-    typingElement.textContent = ""; // Очищаем "Loading..."
-    currentTextArrayIndex = 0; // Сбрасываем индекс, чтобы начать с первого текста
-    isTypingActive = false; // Сбрасываем флаг активности
-
-    if (textArray.length > 0) {
-      const [firstText, firstTime] = textArray[currentTextArrayIndex];
-      typeWriter(firstText, firstTime, startNextTyping);
+      // Добавляем обработчик для отслеживания времени видео
+      videoElement.addEventListener("timeupdate", checkVideoTime);
     }
   });
 
@@ -169,15 +186,12 @@ document.addEventListener("DOMContentLoaded", function () {
       videoElement.classList.add("hidden");
 
       if (cooldownCount < 1) {
-        cooldownCount++
+        cooldownCount++;
         anim();
       }
     });
   }
-
-  
 });
-
 
 let w = (c.width = window.innerWidth),
   h = (c.height = window.innerHeight),
@@ -475,7 +489,6 @@ Letter.prototype.step = function () {
 
       if (this.cy + this.size < -hh || this.cx < -hw || this.cy > hw)
         this.phase = "done";
-
     }
   }
 };
@@ -555,13 +568,81 @@ function anim() {
     for (let l = 0; l < letters.length; ++l) {
       letters[l].reset();
     }
+    showCongratulations();
     // Анимация завершена - ничего не делаем в текущем кадре
   } else {
     window.requestAnimationFrame(anim); // Продолжаем анимацию, если не завершена
   }
 }
 
+function showCongratulations() {
+  // Создаем белый экран
+  const congratulationsScreen = document.createElement("div");
+  congratulationsScreen.style.position = "fixed";
+  congratulationsScreen.style.top = "0";
+  congratulationsScreen.style.left = "0";
+  congratulationsScreen.style.width = "100%";
+  congratulationsScreen.style.height = "100%";
+  congratulationsScreen.style.backgroundColor = "white";
+  congratulationsScreen.style.zIndex = "1000"; // Чтобы быть поверх всего
 
+  // Создаем текст поздравления
+  const congratulationsText = document.createElement("h1");
+  congratulationsText.textContent =
+    "Нажми на подарок и напиши 'секретный подарок'"; // Ваш текст поздравления
+  congratulationsText.style.position = "absolute";
+  congratulationsText.style.top = "25%";
+  congratulationsText.style.left = "50%";
+  congratulationsText.style.transform = "translate(-50%, -50%)"; // Центрируем текст
+  congratulationsText.style.width = "400px";
+  congratulationsText.style.height = "175px";
+  congratulationsText.style.textAlign = "center";
+  congratulationsText.style.color = "black"; // Цвет текста
+
+  // Создаем контейнер для изображения
+  const imageContainer = document.createElement("div");
+  imageContainer.style.position = "absolute";
+  imageContainer.style.bottom = "50%";
+  imageContainer.style.left = "50%";
+  imageContainer.style.transform = "translateX(-50%)";
+
+   const telegramLink = document.createElement("a");
+   telegramLink.href = "https://t.me/michail_P7"; // Замените на ваш никнейм
+   telegramLink.target = "_blank";
+   telegramLink.style.display = "flex";
+   telegramLink.style.filter = "drop-shadow(4px 5px 8px black)";
+   telegramLink.style.textDecoration = "none";
+   telegramLink.style.justifyContent = "center";
+   telegramLink.style.justifyItems = "center";
+
+   // Создаем само изображение
+   const telegramImage = document.createElement("img");
+   telegramImage.src = "images/Gift.png"; // Укажите путь к вашему изображению
+   telegramImage.alt = "Перейти в Telegram";
+   telegramImage.style.width = "100px";
+   telegramImage.style.height = "100px";
+   telegramImage.style.borderRadius = "8px";
+   telegramImage.style.transition = "transform 0.3s";
+   telegramImage.style.top = "auto";
+   telegramImage.style.marginBottom = "-25px";
+
+  // Добавляем стили для эффекта при наведении
+  telegramImage.onmouseover = function () {
+    this.style.transform = "scale(1.2)";
+  };
+  telegramImage.onmouseout = function () {
+    this.style.transform = "scale(1)";
+  };
+
+  // Собираем всё вместе
+  telegramLink.appendChild(telegramImage);
+  imageContainer.appendChild(telegramLink);
+  congratulationsScreen.appendChild(congratulationsText);
+  congratulationsScreen.appendChild(imageContainer);
+
+  // Добавляем экран на страницу
+  document.body.appendChild(congratulationsScreen);
+}
 
 for (let i = 0; i < opts.strings.length; ++i) {
   for (var j = 0; j < opts.strings[i].length; ++j) {
