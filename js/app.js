@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
     "С ДНЕМ РОЖДЕНИЯ!": 1,
     "С ДНЕМ РОЖДЕНИЯ!!": 0.6,
     "С ДНЕМ РОЖДЕНИЯ!!!": 0.6,
-    "ТЕБЯ<=": 1,
+    "ТЕБЯ<3": 1,
 
-    "ту ту ту ту ту ту ту": 2.5,
+    "ту ту ту ту ту ту ту": 3,
   };
   const textArray = Object.entries(textsAndTimes);
   let currentTextArrayIndex = 0;
@@ -590,7 +590,7 @@ function showCongratulations() {
   // Создаем текст поздравления
   const congratulationsText = document.createElement("h1");
   congratulationsText.textContent =
-    "Нажми на подарок и напиши 'секретный подарок'"; // Ваш текст поздравления
+    "Нажми на подарок и напиши (секретный подарок)"; // Ваш текст поздравления
   congratulationsText.style.position = "absolute";
   congratulationsText.style.top = "25%";
   congratulationsText.style.left = "50%";
