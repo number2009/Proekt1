@@ -590,7 +590,7 @@ function showCongratulations() {
   // Создаем текст поздравления
   const congratulationsText = document.createElement("h1");
   congratulationsText.textContent =
-    "Нажми на подарок и напиши (ПРИЗ В СТУДИЮ!)"; // Ваш текст поздравления
+    "Нажми на подарок и напиши (ПОДАРОК В СТУДИЮ!)"; // Ваш текст поздравления
   congratulationsText.style.position = "absolute";
   congratulationsText.style.top = "25%";
   congratulationsText.style.left = "50%";
